@@ -24,14 +24,14 @@
       <file leaf-file-name="test_add_group.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test_add_group.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5667167">
-              <caret line="30" column="31" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="31" />
+            <state vertical-scroll-proportion="-0.67466265">
+              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
               <folding>
                 <element signature="e#24#82#0" expanded="true" />
-                <element signature="e#1197#1260#0" expanded="false" />
-                <element signature="e#1311#1392#0" expanded="false" />
-                <element signature="e#2204#2276#0" expanded="false" />
-                <element signature="e#2768#2844#0" expanded="false" />
+                <element signature="e#987#1050#0" expanded="false" />
+                <element signature="e#1101#1182#0" expanded="false" />
+                <element signature="e#2067#2139#0" expanded="false" />
+                <element signature="e#2664#2740#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -309,14 +309,14 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/test_add_group.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5667167">
-          <caret line="30" column="31" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="31" />
+        <state vertical-scroll-proportion="-0.67466265">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding>
             <element signature="e#24#82#0" expanded="true" />
-            <element signature="e#1197#1260#0" expanded="false" />
-            <element signature="e#1311#1392#0" expanded="false" />
-            <element signature="e#2204#2276#0" expanded="false" />
-            <element signature="e#2768#2844#0" expanded="false" />
+            <element signature="e#987#1050#0" expanded="false" />
+            <element signature="e#1101#1182#0" expanded="false" />
+            <element signature="e#2067#2139#0" expanded="false" />
+            <element signature="e#2664#2740#0" expanded="false" />
           </folding>
         </state>
       </provider>
