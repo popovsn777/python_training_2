@@ -13,9 +13,9 @@ class ContactHelper:
 
     def fill_contact_form(self, contact):
         wd = self.app.wd
-        self.change_value(self, "contact_name", contact.name)
-        self.change_value(self, "contact_lastname", contact.lastname)
-        self.change_value(self, "contact_addres", contact.addres)
+        self.change_value("firstname", contact.name)
+        self.change_value("lastname", contact.lastname)
+        self.change_value("address", contact.addres)
 
 
     def change_value(self, field_name, text):
@@ -27,8 +27,8 @@ class ContactHelper:
 
     def modify_first_contact(self, contact):
         wd = self.app.wd
-        self.go_to_new_contact_page()
         wd.find_element_by_xpath("//table[@id='maintable']/tbody/tr[2]/td[8]/a/img").click()
+
         self.fill_contact_form(contact)
         wd.find_element_by_name("update").click()
 
