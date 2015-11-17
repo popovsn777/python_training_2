@@ -49,3 +49,12 @@ class ContactHelper:
         # adding new contact
         wd = self.app.wd
         wd.find_element_by_link_text("add new").click()
+
+
+    def contact_count(self):
+        wd = self.app.wd
+        print("contact_Debug1")
+        print(len(wd.find_elements_by_name("selected[]")))
+        print("contact_Debug2")
+
+        return len(wd.find_elements_by_name("selected[]"))
