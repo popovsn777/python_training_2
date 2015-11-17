@@ -68,11 +68,16 @@ class GroupHelper:
 
     def count(self):
         wd = self.app.wd
-        print("count_Debug1")
         self.open_groups_page()
-        print("count_Debug2")
         print(len(wd.find_elements_by_name("selected[]")))
         return len(wd.find_elements_by_name("selected[]"))
+
+    def get_group_list(self):
+        wd = self.app.wd
+        self.open_groups_page()
+        for elements in wd.find_elements_by_css_selector("span.group"):
+            text = 
+
 
 
 
