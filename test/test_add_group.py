@@ -1,19 +1,27 @@
-# -*- coding: utf-8 -*-
+__author__ = 'popov.sn'
+
+print("DEBUG_TEST1")
 from model.group import Group
+
+
+print("DEBUG_TEST2")
 
 
 def test_add_group(app):
     old_groups = app.group.get_group_list()
-    print("Debug old_groups = ", len(old_groups) )
-    app.group.create( Group(name="new_group_name2", header="group_header2", footer="group_footer2"))
-    new_group = app.group.get_group_list()
-    print("Debug new_groups = ", len(new_group) )
-    assert len(old_groups) + 1 == len(new_group)
+    group = Group(name="new_group_POP", header="group_headerPOP", footer="group_footerPOP")
+    app.group.create(group)
+    new_groups = app.group.get_group_list()
+    assert len(old_groups) + 1 == len(new_groups)
+    old_groups.append(group)
+    assert sorted(old_groups, key=Group.id_or_max) == sorted(new_groups, key=Group.id_or_max)
+
 
 def test_add_empty_group(app):
     old_groups = app.group.get_group_list()
-    app.group.create(Group(name="", header="", footer=""))
-    new_group = app.group.get_group_list()
-    assert len(old_groups) + 1 == len(new_group)
-
-
+    group = Group(name="", header="", footer="")
+    app.group.create(group)
+    new_groups = app.group.get_group_list()
+    assert len(old_groups) + 1 == len(new_groups)
+    old_groups.append(group)
+    assert sorted(old_groups, key=Group.id_or_max) == sorted(new_groups, key=Group.id_or_max)

@@ -8,6 +8,7 @@ fixture = None
 
 @pytest.fixture
 def app(request):
+    print ("DEBUG fixture")
     global fixture
     if fixture is None:
         fixture = Application()
