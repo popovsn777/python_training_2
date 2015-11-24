@@ -61,4 +61,6 @@ class ContactHelper:
 
     def get_contact_list(self):
         wd = self.app.wd
-        wd.find_elements_by_name("selected[]")
+        for c_element in wd.find_elements_by_css_selector("tr[name]"):
+            c_text = c_element.get_text()
+            c_element.find_element_by_name("selected[]").get_attribute
