@@ -1,5 +1,8 @@
 __author__ = 'popov.sn'
 
+from model.contact import Contact
+
+
 class ContactHelper:
 
     def __init__(self, app):
@@ -61,6 +64,9 @@ class ContactHelper:
 
     def get_contact_list(self):
         wd = self.app.wd
+        c_list = []
         for c_element in wd.find_elements_by_css_selector("tr[name]"):
-            c_text = c_element.get_text()
-            c_element.find_element_by_name("selected[]").get_attribute
+            id_contact = c_element.find_element_by_name("selected[]").get_attribute("value")
+            name_contact = c_element.find_element_by_name("selected[]").get_attribute("value")
+            print ("Debug id =>", id)
+            c_list.append(Contact())
