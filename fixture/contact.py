@@ -67,6 +67,20 @@ class ContactHelper:
         c_list = []
         for c_element in wd.find_elements_by_css_selector("tr[name]"):
             id_contact = c_element.find_element_by_name("selected[]").get_attribute("value")
-            name_contact = c_element.find_element_by_name("selected[]").get_attribute("value")
-            print ("Debug id =>", id)
-            c_list.append(Contact())
+            print ("Debug id_contact =>", id_contact)
+            name_contact = c_element.find_element_by_xpath("./td[3]").text
+            print ("Debug name_contact =>", name_contact)
+            c_list.append(Contact( name = name_contact, id=id_contact ))
+        return c_list
+
+
+    def get_contact_list1(self):
+        wd = self.app.wd
+        c_list1 = []
+        for c_element in wd.find_elements_by_css_selector("tr[name]"):
+            id_contact = c_element.find_element_by_name("selected[]").get_attribute("value")
+            print ("Debug id_contact11111 =>", id_contact)
+            name_contact = c_element.find_element_by_xpath("./td[3]").text
+            print ("Debug name_contact1111 =>", name_contact)
+            c_list1.append(Contact( name = name_contact, id=id_contact ))
+        return c_list1
